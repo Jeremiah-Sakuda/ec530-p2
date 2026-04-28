@@ -1,0 +1,33 @@
+# Web framework
+fastapi>=0.109.0
+uvicorn>=0.27.0
+
+# Redis
+redis>=5.0.0
+
+# MongoDB
+pymongo>=4.6.0
+motor>=3.3.0
+
+# TinyDB (offline fallback)
+tinydb>=4.8.0
+
+# Vector search
+faiss-cpu>=1.7.4
+numpy>=1.26.0
+
+# Configuration
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# CLI
+click>=8.1.0
+httpx>=0.26.0
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.23.0
+fakeredis>=2.20.0
+
+# Utilities
+python-dotenv>=1.0.0
