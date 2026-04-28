@@ -13,6 +13,7 @@ from .handlers import (
     get_image_status,
     update_image_status,
 )
+from .api import app, set_registry, set_broker, get_registry, get_broker
 
 __all__ = [
     "ImageRecord",
@@ -24,4 +25,9 @@ __all__ = [
     "handle_upload",
     "get_image_status",
     "update_image_status",
+    "app",
+    "set_registry",
+    "set_broker",
+    "get_registry",
+    "get_broker",
 ]
