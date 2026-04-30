@@ -72,8 +72,14 @@ async def handle_inference_completed(
 
     logger.info(f"Storing annotation for image {image_id}")
 
-    # Build and store annotation document
+    # Build annotation document
     doc = build_annotation_document(payload)
+
+    # Preserve existing processed_event_ids from previous document
+    existing_doc = await repo.get(image_id)
+    if existing_doc:
+        doc["processed_event_ids"] = existing_doc.get("processed_event_ids", [])
+
     await repo.upsert(image_id, doc)
     await repo.add_processed_event(image_id, envelope.event_id)
 
